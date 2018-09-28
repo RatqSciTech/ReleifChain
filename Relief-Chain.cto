@@ -1,0 +1,60 @@
+*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * Sample business network definition.
+ */
+namespace org.example.basic
+
+asset SampleAsset identified by assetId {
+  o String assetId
+  --> SampleParticipant owner
+  o Double balance
+}
+
+participant SampleParticipant identified by participantId {
+  o String participantId
+  o String firstName
+  o String lastName
+  --> SampleAsset asset
+
+}
+asset FundForCause extends SampleAsset  {
+  o  Double reqdFund
+  o String causeDesc
+}
+
+transaction SampleTransaction {
+  --> SampleParticipant donor
+   --> SampleParticipant org
+   --> FundForCause cause
+  o Double amount
+}
+
+event SampleEvent {
+   --> SampleParticipant donor
+   --> SampleParticipant receiver
+  --> SampleAsset fund
+   --> SampleAsset wallet
+   o String donorName
+   o String orgName
+  o Double txnAmnt
+   o Double donorBalance
+   o Double rcvrBalance
+   o Double causeBalance
+   o Double requiredFund
+      
+
+   
+}
