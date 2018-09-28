@@ -2,14 +2,14 @@ System Overview:
 Phase 1 :
 1. NGOs will list the sub-funds dedicated to specific cause.
 2. Each sub-fund will list the estimated fund required.
-3.Doner will donate to for perticular cause using blockchain wallet.
+3.Doner will donate to for particular cause using blockchain wallet.
 4.Transaction records will be generated. 
 5.Records should show:
    a. Amount of money transfered, 
    b. Name of donor and organization
    c. Donor's balance after transaction
    d. Total collection of the organization after transaction.
-   e. Total collection for the perticular cause
+   e. Total collection for the particular cause
  6.Funds,Sub-Funds, Wallets are updated accordingly.
 
 
